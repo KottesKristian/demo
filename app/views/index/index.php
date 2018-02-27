@@ -5,7 +5,6 @@
 
                 <?php
                     $params = $this->registry['params'];
-                    var_dump($params);
                 ?>
                 <select name='sort'>
                     <option <?php echo $params['created_at'] === 'ASC' ? 'selected' : '';?>  value="date_ASC">сортування по даті</option>
