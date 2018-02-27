@@ -25,6 +25,10 @@
                         <th scope="col">#</th>
                         <th scope="col">Ім'я</th>
                         <th scope="col">e-mail</th>
+                        <?php if (Helper::isAdmin()): ?>
+                        <th scope="col">ip</th>
+                        <th scope="col">Браузер</th>
+                        <?php endif; ?>
                         <th scope="col">Дата додавання</th>
                         <?php if (Helper::isAdmin()): ?>
                         <th scope="col"></th>
@@ -44,6 +48,10 @@
                         <td><?php echo $value['name'];?></td>
                         <?php endif;?>
                         <td><?php echo $value['email'];?></td>
+                        <?php if (Helper::isAdmin()): ?>
+                        <td><?php echo $value['ip'];?></td>
+                        <td><?php echo $value['browser_info'];?></td>
+                        <?php endif; ?>
                         <td><?php echo $value['created_at'] = date('d.m.Y H:i:s', strtotime($value['created_at']));;?></td>
                         <?php if (Helper::isAdmin()): ?>
                         <td id="delete"><?php echo Helper::simpleLink('/recording/delete', 'Видалити', array('id'=>$value['id']));?></td>
