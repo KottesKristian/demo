@@ -22,5 +22,6 @@
         <script src='https://www.google.com/recaptcha/api.js'></script>
         <script src="/js/validator.js"></script>
         <script src="/js/table-pagination.js"></script>
+        <script src="/js/main.js"></script>
     </body>
 </html>
